@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--Andrew Grant 10/23/25-->
+<html lang="en">
+    <head>
+        <title>Week 3: Shopping</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Project 3</h1>
+        <h3>Andrew Grant</h3>
+        <h3>Questions</h3>
+        <p>1. Name a situation where you would need to create an "if" statement.</p>
+        <p>2. When comparing values, in what data type is the result stored?</p><br>
+        <h3>Answers</h3>
+        <p>1. A situation where an "if" statement would be useful is checking to see if a username is taken or not.</p>
+        <p>2. The result is stored and returned as a boolean datatype.</p>
+        <script>
+            // Prompts customer to enter shopping total
+            let total = prompt("Please enter shopping total:");
+
+            // Asks customer to confirm shopping total they entered
+            confirm("$" + total + " total? Click OK to continue!");
+
+            if (total < 50) {                   // Checks if total is less than 50
+                alert("No discount!")           // Alerts customer they have no discount
+            } else if (total < 100) {           // Checks if total is less than to 100
+                alert("10% off!")               // Alerts customer of discount
+            } else if (total >= 100) {          // Checks if total is greater than or equal to 100
+                alert("20% off!")               // Alerts customer of discount
+            }
+        </script>   
+    </body>
+</html>
