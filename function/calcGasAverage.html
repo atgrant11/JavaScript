@@ -1,0 +1,53 @@
+<!-- Andrew Grant Nov 13, 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate average weekly gas bill</title>
+  </head>
+  <body>
+    <h1>What is the purpose of a function?</h1>
+    <h2>The purpose is to issue a series of instructions to the code without typing the instructions over and over again.</h2>
+
+    <h2>Hit F12 to see the console log.</h2>
+
+    <script>
+        const username = prompt("Please enter your name:");
+        let entryCount = 0;
+        let gasAvg = calcGasAvg();
+
+        confirm(username + "'s average weekly gas bill is $" + gasAvg.toFixed(2));
+
+        if (entryCount === 0) {
+            confirm("No gas totals were entered.");
+        } else if (entryCount === 1) {
+            console.log("You entered " + entryCount + " gas total.");
+        } else {
+            console.log("You entered " + entryCount + " gas totals.")
+        };
+
+        function calcGasAvg() {
+            let count = 0;
+            let total = 0;
+            gasBill = parseFloat(prompt("Enter your week's gas bill. Enter -1 when done."));
+
+            while (gasBill !== -1) {
+                total = total + gasBill;
+                count++;
+                gasBill = parseFloat(prompt("Enter your week's gas bill. Enter -1 when done."));
+            };
+
+            let gasAvg;
+            if (count > 0) {
+                gasAvg = total / count;
+            } else {
+                gasAvg = 0;
+            };
+
+            entryCount = count;
+            return gasAvg;
+        };
+    </script>
+  </body>
+</html>
