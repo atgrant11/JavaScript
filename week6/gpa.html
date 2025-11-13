@@ -1,0 +1,43 @@
+<!-- Andrew Grant Nov 13, 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate someone's GPA</title>
+  </head>
+  <body>
+    <h2>Hit F12 to see the console log.</h2>
+
+    <script>
+      let username = prompt("Enter your name"); //ask their name.
+      let gpa = calcGPA(); //call the function
+      console.log(gpa); //testing to see if it works
+
+      confirm(username + "'s GPA is " + gpa); //return the name and GPA
+
+      function calcGPA() {
+        let count = 0; //initialize the count
+        let total = 0; //initialize the total
+        let grade = 0; //initialize the grades
+
+        grade = parseFloat(
+          prompt("Enter a GPA score from 1-4. Enter -1 when you are done.")
+        );
+        //The above tests for the first GPA score. This allows for someone to say -1 for no grades.
+
+        while (grade !== -1) {
+          // This is a pre test. You can have 0 grades
+          total = total + grade; //Add grades
+          count++; //increment the number of grades
+          grade = parseFloat(
+            prompt("Enter a GPA score from 1-4. Enter -1 when you are done.")
+          );
+        } //The above line will enter all other grades and change them to a Float data type.
+        // It will test by going up to beginning of the loop.
+
+        return total / count; // return the gpa
+      }
+    </script>
+  </body>
+</html>

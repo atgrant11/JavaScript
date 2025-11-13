@@ -1,0 +1,57 @@
+<!-- Allison Hanna March 8, 2024 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Groceries</title>
+  </head>
+  <body>
+    <h2>Hit F12 to see the console log.</h2>
+
+    <script>
+      let entryCount = 0; 
+      let username = prompt("Enter your name");
+      let groceryAvg = calcAvgGrocery();
+     
+       confirm(`${username}'s average weekly gas bill is $${groceryAvg.toFixed(2)}`);
+
+      // Confirm how many entries were made (with if logic)
+      if (entryCount === 0) {
+        confirm("No gas totals were entered.");
+      } else if (entryCount === 1) {
+        confirm(`You entered ${entryCount} gas total.`);
+      } else {
+        confirm(`You entered ${entryCount} gas totals.`);
+      }
+
+      function calcAvgGrocery() {
+        let count = 0;
+        let total = 0;
+        let groceryBill = 0;
+
+        groceryBill = parseFloat(
+          prompt("Enter your week's grocery bill. Enter -1 when you are done."));
+        //The above tests for the first week's bill. This allows for someone to say -1 for no groceries.
+
+        while (groceryBill !== -1) {
+          // This is a pre test. You can have 0 groceries.
+          total = total + groceryBill; //Add groceries
+          count++; //increment the number of week's for groceries.
+          groceryBill = parseFloat(prompt("Enter your week's grocery bill. Enter -1 when you are done.")
+          );
+        } //The above line will enter all other grocery week's total. It will test by going up to beginning of the loop.
+
+          let shoppingAvg;
+          if (count > 0) {
+            shoppingAvg = total / count;
+          } else {
+            shoppingAvg = 0;
+      }
+      entryCount = count;
+     
+        return shoppingAvg; // return the  grocery average
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!-- Andrew Grant Nov 13, 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate someone's average weekly grocery bill</title>
+  </head>
+  <body>
+    <h1> Let's make a Grocery Average calculator </h1>
+    <h2>Hit F12 to see the console log.</h2>
+
+    <script>
+      const name = prompt("Please enter your name:");
+      let entryCount = 0;
+
+      let groceryAvg = calcGroceryBill();
+
+      confirm(name + "'s average weekly grocery bill is $" + groceryAvg.toFixed(2));
+
+      if (entryCount === 0) {
+        confirm("No grocery totals were entered.");
+      } else if (entryCount === 1) {
+        console.log("You entered " + entryCount + "grocery total.");
+      } else {
+        console.log("You entered " + entryCount + " grocery totals.");
+      };
+
+      function calcGroceryBill() {
+        let count = 0;
+        let total = 0;
+
+        groceryBill = parseFloat(prompt("Enter yor week's grocery bill. Enter -1 when done."));
+
+        while (groceryBill !== -1) {
+          total = total + groceryBill;
+          count++;
+          groceryBill = parseFloat(prompt("Enter yor week's grocery bill. Enter -1 when done."));
+        };
+
+        let shoppingAvg;
+        if (count > 0) {
+          shoppingAvg = total / count;
+        } else {
+          shoppingAvg = 0;
+        };
+
+        entryCount = count;
+
+        return shoppingAvg;
+      };
+    </script>
+  </body>
+</html>
