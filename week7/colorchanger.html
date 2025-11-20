@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Changer</title>
+  </head>
+  <body>
+    <h1>Click the button below to change the color of the webpage.</h1>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+      // Step 1
+      const changeColorButton = document.querySelector("#changeColorButton");
+      // Step 2
+      changeColorButton.addEventListener("click", function () {
+      // Step 3
+        let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </body>
+</html>

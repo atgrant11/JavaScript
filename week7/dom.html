@@ -1,0 +1,61 @@
+
+    <!DOCTYPE html>
+    <!-- Andrew Grant 11/20/24-->
+   <html lang="en">
+    <head>
+        <title>Interacting with the DOM</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: blue;
+            }
+    
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+    
+            p {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="welcomeMsg">Interacting with the DOM</h1>
+        <img src="https://allisonjccc.github.io/WEB114/DOM/car.jpg" alt="Car Image">
+        <p>Playing with the DOM and Objects in a web page</p>
+        <hr>
+
+        <p> This is a DOM map of a default page. </p>
+            <img src = "https://allisonjccc.github.io/WEB114/DOM/dom.png" alt = "DOM image "> 
+        <script>
+        //The Document Object Model (DOM) is a programming interface that represents structured documents like HTML and XML as a tree of objects.
+        //It defines how to access, manipulate, and modify document elements using scripting languages like JavaScript.
+
+        //Key Points:
+
+        //Tree Structure: The DOM represents a document as a hierarchical tree structure, where each node represents an element, attribute, or text content of the document.
+        //It is an object()
+        // Objects have properties and methods.
+
+        //DOM is created when you load in an HTML document and structgures all the elemens in a tree-llike representation.
+        //JS can access the DOM to dynamically change, the content, structure, and style of a web page.
+
+
+        // Step 1--  What do you want to change in the page (the whole page or a piece of it?)
+        document.body.style.backgroundColor = "#add8e6"; // watch bkg change -- the whole page
+
+        // Step 2-- Create a variable and select the piece of the page to change
+        const username = "Andrew Grant's web page"; 
+        const welcomeMsg = document.querySelector("#welcomeMsg");
+
+        // Step 3-- the piece of the page once you have selected it above using the variable
+        welcomeMsg.textContent = "Welcome to " + username;
+        welcomeMsg.style.color = "#33aa88";  // Change the text color
+
+
+
+        </script>
+
+    </body>
+    </html>
