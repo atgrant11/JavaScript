@@ -16,7 +16,7 @@ function createStory() {
     let ending;
     if (noun1.length < 6 || doubleNum <= 10) {
         ending = ` The ${animal} weren't threatening after all and were curious about Karlach's ${noun1}`;
-    } else if (noun1.length <= 6 && doubleNum >= 11) {
+    } else if (noun1.length <= 6 && doubleNum > 11) {
         ending = ` Luckily, Astarion's expertise as a ${job} helped the party outsmart and escape the ${animal} unharmed.`;
     } else {
         ending = ` Shadowheart's divine powers as a cleric calmed the ${animal} and sent them back into the cave.`;
@@ -36,3 +36,4 @@ function createStory() {
     document.querySelector("#storyOutput").innerHTML = story;
 
 }
+
