@@ -1,7 +1,7 @@
 // This creates the Mad Libs when the "Create Adventure!" button is clicked.
 document.querySelector("#submit-btn").addEventListener("click", createStory);
 
-//This function creates the Mad Libs itself
+// This function creates the Mad Libs itself
 function createStory() {
 
     // This prevents the page from automatically reloading
@@ -52,5 +52,6 @@ function createStory() {
 function refreshPage() {
     window.location.reload();
 };
+
 
 
