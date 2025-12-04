@@ -1,1 +1,0 @@
-I chose the Mad Libs project for my final. I chose to make the Mad Libs Dungeons & Dragons themed because it is a passion of mine and the three characters named in the Mad Libs story are from the popular Dungeons & Dragons video game: Baldur's Gate 3. This taught me alot about how JavaScript interacts with HTML and user input to create a fun and engaging online experience.
