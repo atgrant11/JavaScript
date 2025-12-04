@@ -43,7 +43,7 @@ function createStory() {
         Karlach squealed with delight, "Get ready guys! It's time for ${noun2}!" In the end: ${ending}
     `;
 
-    //This outputs the story to the webpage
+    // This outputs the story to the webpage
     document.querySelector("#storyOutput").innerHTML = story;
 
 };
@@ -52,4 +52,5 @@ function createStory() {
 function refreshPage() {
     window.location.reload();
 };
+
 
